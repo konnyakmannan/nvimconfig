@@ -27,6 +27,8 @@ require('packer').startup(function(use)
   -- Additional textobjects for treesitter
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
+  -- Add Japanese Input Method
+  use 'tyru/eskk.vim' -- Collection of configurations for built-in LSP client
 end)
 
 --Set highlight on search
@@ -216,5 +218,7 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+require('plugins/eskk')
 
 -- vim: ts=2 sts=2 sw=2 et

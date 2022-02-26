@@ -55,6 +55,9 @@ vim.cmd [[
 -- Remove whitespace on save
 vim.cmd [[au BufWritePre * :%s/\s\+$//e]]
 
+-- Set file type
+vim.cmd [[au BufNewFile,BufRead *.njk set ft=jinja]]
+
 -- Fast saving
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('i', '<leader>w', '<C-c>:w<CR>', {noremap = true, silent = true})
